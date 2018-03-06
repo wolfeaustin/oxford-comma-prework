@@ -1,5 +1,6 @@
 def oxford_comma(array)
   sentence = ""
+  return array.to_s if array.size == 1 
   array.each_with_index do |el, i|
     if i == array.size - 1
       sentence << "and #{el}"
