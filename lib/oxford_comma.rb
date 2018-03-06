@@ -1,4 +1,11 @@
 def oxford_comma(array)
-  temp = array.join(", ")
-  sentence = temp.split()
+  sentence = ""
+  array.each_with_index do |el, i|
+    if i == array.size - 1
+      sentence << "and #{el}"
+    else 
+      sentence << "#{el}, "
+    end 
+  end 
+  sentence
 end
